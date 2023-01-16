@@ -25,6 +25,6 @@ export function validateAndParseBody(body: string) {
 
     return parsed;
   } catch (e) {
-    return { error: 'Invalid body' };
+    return { error: 'Invalid request body' };
   }
 }
