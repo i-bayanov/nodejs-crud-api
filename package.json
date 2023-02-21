@@ -1,0 +1,41 @@
+{
+  "name": "nodejs-crud-api",
+  "version": "0.1.0",
+  "description": "",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node .",
+    "start:prod": "cross-env NODE_ENV_BALANCER=without_balancer webpack --mode production && npm start",
+    "start:dev": "nodemon",
+    "start:multi": "cross-env NODE_ENV_BALANCER=with_balancer nodemon",
+    "start:multi:prod": "cross-env NODE_ENV_BALANCER=with_balancer webpack --mode production && npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/i-bayanov/nodejs-crud-api.git"
+  },
+  "keywords": [],
+  "author": "Ilia Bayanov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/i-bayanov/nodejs-crud-api/issues"
+  },
+  "homepage": "https://github.com/i-bayanov/nodejs-crud-api#readme",
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "@types/uuid": "^9.0.0",
+    "clean-webpack-plugin": "^4.0.0",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.3",
+    "nodemon": "^2.0.20",
+    "ts-loader": "^9.4.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.4",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  },
+  "dependencies": {
+    "uuid": "^9.0.0"
+  }
+}
